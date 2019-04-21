@@ -38,7 +38,7 @@ export class PrestadoresComponent implements OnInit {
   }
 
   deletePrestador(id) {
-    const response = confirm('are you sure to delete it?');
+    const response = confirm('seguro que desea eliminar?');
     if (response ){
       const prestadores = this.prestadores;
       this.prestadorsevice.deletePrestador(id)

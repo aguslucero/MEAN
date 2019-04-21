@@ -190,7 +190,7 @@ var TasksComponent = /** @class */ (function () {
         });
     };
     TasksComponent.prototype.deleteTask = function (id) {
-        var response = confirm('are you sure to delete it?');
+        var response = confirm('seguro que desea eliminar?');
         if (response) {
             var tasks_1 = this.tasks;
             this.taskService.deleteTask(id)

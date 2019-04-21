@@ -35,7 +35,7 @@ router.post('/prestadores', (req, res, next) => {
 
 // Delete task
 router.delete('/prestadores/:id', (req, res, next) => {
-    db.prestadores.remove({_id: mongojs.ObjectId(req.params.id)}, (err, task) => {
+    db.prestadores.remove({_id: mongojs.ObjectId(req.params.id)}, (err, prestador) => {
         if(err){ res.send(err); }
         res.json(prestador);
     });
