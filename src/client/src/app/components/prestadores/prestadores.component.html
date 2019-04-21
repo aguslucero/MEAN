@@ -1,0 +1,33 @@
+<div class="card m-3">
+  <div class="card-body">
+    <form (submit)="addPrestador($event)">
+      <div class="input-group">
+          <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control" placeholder="agregar un prestador">
+          <span class="input-group-addon">
+              <button type="submit" class="btn btn-primary">
+                  Agregar
+                </button>
+          </span>
+      </div>
+      </form>
+  </div>
+</div>
+
+<table class="table text-center table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prestador of prestadores">
+      <td>{{ prestador.nombre }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deletePrestador(prestador._id)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
