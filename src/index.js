@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 
-const indexRoutes = require('./routes/index');
+//const indexRoutes = require('./routes/index');
 const tasksRoutes = require('./routes/tasks');
+const prestadoresRoutes = require('./routes/prestadores');
 
 const app = express();
-
 // settings
 // app.set('views', path.join(__dirname, 'views'));
 // app.engine('html', require('ejs').renderFile);
@@ -22,6 +22,7 @@ app.use(express.urlencoded({extended: false}));
 // routes
 // app.use('/', indexRoutes);
 app.use('/api', tasksRoutes);
+app.use('/api', prestadoresRoutes)
 
 // static files
 app.use(express.static(path.join(__dirname, 'dist')));
